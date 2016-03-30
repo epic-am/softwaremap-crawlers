@@ -59,16 +59,19 @@ UpstreamService.prototype._sendServices = function () {
       method: 'POST',
       json: {
         name: service.name,
-        metadata: {
-          type: service.type
-        }
+        type: service.type,
+        metadata: { }
       }
     }, (err, response, body) => {
       if (err) {
         console.log(err);
         return;
       }
-      service.id = response.body.id;
+      if (response.statusCode === 409) {
+        service.id = response.body.serviceId;
+      } else {
+        service.id = response.body.id;
+      }
       this.logger.debug(`service : ${service.name} : ${response.statusCode}`);
       this._sendExecutors(service);
     });
@@ -91,7 +94,11 @@ UpstreamService.prototype._sendExecutors = function (service) {
         console.log(err);
         return;
       }
-      executor.id = response.body.id;
+      if (response.statusCode === 409) {
+        executor.id = response.body.executorId;
+      } else {
+        executor.id = response.body.id;
+      }
       this.logger.debug(`service : ${service.name} - executor ${executor.name} : ${response.statusCode}`);
     });
   });
