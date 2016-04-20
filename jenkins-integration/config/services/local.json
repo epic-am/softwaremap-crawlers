@@ -1,0 +1,9 @@
+{
+  "service": {
+    "name": "service-integration",
+    "type": "integration",
+    "jobs": [{
+        "name": "job1"
+      }]
+    }
+}
