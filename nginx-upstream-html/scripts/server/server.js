@@ -25,9 +25,8 @@ var Server = function (options) {
   };
 
   self.initialize = function () {
-    var env = "preprod";
     self.setupTerminationHandlers();
-    self.upstreamService = new upstreamService(env, CONFIG.core, CONFIG.crawler);
+    self.upstreamService = new upstreamService(CONFIG.env, CONFIG.core, CONFIG.crawler);
     self.jobs = self.upstreamService.getJobs();
   };
 
