@@ -86,7 +86,7 @@ UpstreamService.prototype._sendExecutors = function (service) {
       json: {
         name: executor.name,
         metadata: {
-          status: "up"
+          status: "none"
         }
       }
     }, (err, response, body) => {
