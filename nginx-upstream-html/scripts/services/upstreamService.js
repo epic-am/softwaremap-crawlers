@@ -60,6 +60,7 @@ UpstreamService.prototype._sendServices = function () {
       json: {
         name: service.name,
         type: service.type,
+        env: service.env || "default",
         metadata: { }
       }
     }, (err, response, body) => {

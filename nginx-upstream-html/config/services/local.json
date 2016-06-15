@@ -3,6 +3,7 @@
     "name": "service1",
     "type": "middle",
     "baseUrl": "/",
+    "env": "local",
     "upstreamUrl": "http://127.0.0.1/.Xadmin/upstream-status",
     "machines": [{
         "name": "executor1",
