@@ -1,0 +1,19 @@
+{
+  "name": "softwaremap-nginx-upstream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start-server.js",
+  "author": "Antoine Moser",
+  "licence": "",
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  },
+  "dependencies": {
+    "cron": "^1.1.0",
+    "config": "^1.19.0",
+    "htmlparser2": "^3.9.0",
+    "http-status": "^0.2.0",
+    "log4js": "^0.6.29",
+    "request": "^2.69.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "services": [{
+    "name": "service1",
+    "type": "middle",
+    "baseUrl": "/",
+    "env": "local",
+    "upstreamUrl": "http://127.0.0.1/.Xadmin/upstream-status",
+    "machines": [{
+        "name": "executor1",
+        "ip": "192.168.0.1",
+        "status": "unknown",
+        "port": 8000
+      },{
+        "name": "executor2",
+        "ip": "192.168.0.2",
+        "status": "unknown",
+        "port": 8000
+      }]
+  }]
+}
