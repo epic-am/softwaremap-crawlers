@@ -1,0 +1,12 @@
+{
+  "services": [{
+    "name": "service1",
+    "type": "middle",
+    "versionUrl": "/version",
+    "machines": [{
+        "name": "machine1",
+        "ip": "127.0.0.1",
+        "port": 8000
+      }]
+    }]
+}

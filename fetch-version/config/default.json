@@ -1,0 +1,12 @@
+{
+  "env": "local",
+  "coreUrl": "http://localhost:5080/api",
+  "crawler": {
+    "cron": "* * * * * *",
+    "timezone": "Europe/Paris"
+  },
+  "fields": {
+    "hg": ["version", "changeSet", "changeSetDate"],
+    "git": ["version", "commitId", "branch", "author", "commitMessageShort", "commitTime"]
+  }
+}
